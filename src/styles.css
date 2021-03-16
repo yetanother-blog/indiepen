@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.result {
+  width: 50%;
+  height: 100vh;
+}
+
+.previews {
+  display: flex; 
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.preview {
+  overflow: auto;
+  margin: 0 !important;
+  height: 33.33%;
+}
+
+.preview > code {
+  margin: 0 !important;
+}

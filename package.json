@@ -1,0 +1,19 @@
+{
+  "name": "previewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prismjs": "^1.23.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.13"
+  }
+}
