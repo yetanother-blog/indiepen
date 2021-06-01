@@ -1,0 +1,48 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 4px;
+  box-sizing: border-box;
+  height: 50px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+}
+
+.navigation__button {
+  border: none;
+  padding: 12px;
+  height: 40px;
+}
+
+.navigation__button:hover {
+  background-color: beige;
+}
+
+.navigation__button:focus {
+  outline: none;
+  background-color: fuchsia;
+}
+
+.navigation__button.active {
+  border-bottom: 2px solid black;
+}
+
+.navigation__button:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.navigation__button:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+/* Desktop */
+@media (min-width: 470px) {
+  .navigation__button {
+    /* cool */
+  }
+}
