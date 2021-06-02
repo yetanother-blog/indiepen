@@ -14,6 +14,6 @@
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
-    "snowpack": "^3.0.13"
+    "snowpack": "^3.5.2"
   }
 }
