@@ -2,15 +2,21 @@
 // See all supported options: https://www.snowpack.dev/reference/configuration
 module.exports = {
   mount: {
-    src: '/',
-  },
-  optimize: {
-    bundle: true,
-    minify: true,
-    treeshake: true,
-    target: 'es2018',
+    src: { 
+      url: '/', 
+      static: false, 
+      resolve: true 
+    },
+    public: { 
+      url: '/', 
+      static: true, 
+      resolve: false 
+    }
   },
   devOptions: {
     openUrl: '?url=http%3A%2F%2Flocalhost%3A8080%2Fexample'
-  }
+  },
+  exclude: [
+    'public/**/*'
+  ]
 };
