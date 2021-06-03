@@ -4,7 +4,7 @@
     Permissions-Policy = "interest-cohort=()"
 
 [build]
-command = "npm run build"
+command = "npm run lint && npm run build"
 publish = "build"
 
 [build.environment]
