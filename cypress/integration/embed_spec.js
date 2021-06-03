@@ -3,7 +3,7 @@ describe('Indiepen Embed', () => {
     cy.visit('?url=http%3A%2F%2Flocalhost%3A8080%2Fexample')
   })
 
-  it('shows the example project', () => {
+  it('Shows the example project', () => {
     cy.contains('👋')
   })
 })
