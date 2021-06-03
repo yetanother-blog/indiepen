@@ -13,3 +13,4 @@ TERM = "xterm"
 package = "netlify-plugin-cypress"
   [plugins.inputs]
     record = true
+    group = "built site"
