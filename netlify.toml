@@ -1,3 +1,8 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "interest-cohort=()"
+
 [build]
 command = "npm run build"
 publish = "build"
@@ -8,6 +13,9 @@ publish = "build"
 CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 # set TERM variable for terminal output
 TERM = "xterm"
+
+[[plugins]]
+  package = "./.netlify/slack"
 
 [[plugins]]
 package = "netlify-plugin-cypress"
