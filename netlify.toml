@@ -12,8 +12,9 @@ TERM = "xterm"
 [[plugins]]
 package = "netlify-plugin-cypress"
   [plugins.inputs]
-    record = true
-    group = "built site"
-  
+    enable = false    
+
   [plugins.inputs.postBuild]
     enable = true
+    record = true
+    group = "built site"
