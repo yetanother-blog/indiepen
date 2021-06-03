@@ -14,3 +14,6 @@ package = "netlify-plugin-cypress"
   [plugins.inputs]
     record = true
     group = "built site"
+  
+  [plugins.inputs.postBuild]
+    enable = true
