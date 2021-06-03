@@ -14,6 +14,8 @@
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
+    "cypress": "^7.4.0",
+    "netlify-plugin-cypress": "^2.2.0",
     "snowpack": "^3.5.4"
   }
 }
