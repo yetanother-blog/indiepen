@@ -15,7 +15,7 @@
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
-    "@types/node": "^15.12.0",
+    "@types/node": "^15.12.1",
     "cypress": "^7.4.0",
     "netlify-plugin-cypress": "^2.2.0",
     "node-fetch": "^2.6.1",
