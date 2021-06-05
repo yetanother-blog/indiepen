@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Indiepen</title>
+    <meta
+      name="description"
+      content="An independent and privacy-friendly solution to present your code example to the people."
+    />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/website/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="/website/styles.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/website/styles.css" />
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Source+Code+Pro:wght@500&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Source+Code+Pro:wght@500&display=swap"
+      media="print"
+      onload="this.media='all'"
+      rel="stylesheet"
+    />
+    <link rel="canonical" href="https://indiepen.tech/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta property="og:site_name" content="Indiepen" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Indiepen" />
+    <meta
+      property="og:description"
+      content="An independent and privacy-friendly solution to present your code example to the people."
+    />
+    <meta property="og:url" content="https://indiepen.tech/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Indiepen" />
+    <meta
+      name="twitter:description"
+      content="An independent and privacy-friendly solution to present your code example to the people."
+    />
+    <meta name="twitter:url" content="https://indiepen.tech/" />
+    <style>
+      :root {
+        --grey-900: rgb(38, 38, 38);
+        --grey-700: rgb(88, 88, 88);
+        --grey-300: rgb(245, 245, 245);
+        --blue-500: rgb(58, 75, 227);
+        --blue-300: rgb(218, 246, 255);
+        --purple-500: rgb(153, 58, 227);
+        --measure: 60ch;
+        font-size: 1rem;
+      }
+      html {
+        font-family: Inter, sans-serif;
+        color: var(--grey-900);
+        line-height: 1.5;
+      }
+      * {
+        max-width: var(--measure);
+      }
+      *,
+      ::after,
+      ::before {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      br,
+      pre,
+      ul li + li {
+        margin-top: 0;
+      }
+      * + * {
+        margin-top: 1.5rem;
+      }
+      h4 + p,
+      p + p {
+        margin-top: 0.85rem;
+      }
+      aside,
+      body,
+      div,
+      footer,
+      form,
+      header,
+      hr,
+      html,
+      input,
+      label,
+      li,
+      main,
+      nav,
+      ol,
+      textarea,
+      ul {
+        max-width: none;
+      }
+      footer ul,
+      nav ul {
+        list-style: none;
+        text-align: right;
+        padding: 1.75rem 0;
+      }
+      nav ul {
+        display: flex;
+      }
+      footer li,
+      nav li {
+        display: inline-block;
+        margin: 0 0.75rem;
+      }
+      .logo {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.3;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .indiepen {
+        margin-top: 3.5rem;
+      }
+      .box {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .box--small {
+        max-width: 40rem;
+      }
+      .box--large {
+        max-width: 46rem;
+      }
+      .title {
+        margin-top: 3.5rem;
+      }
+      .subline {
+        margin-top: 1rem;
+        max-width: 40ch;
+      }
+      h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 400;
+      }
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 900;
+      }
+      h4 {
+        font-weight: 700;
+      }
+      a {
+        color: var(--blue-500);
+        text-decoration: none;
+        border-bottom: 1px solid;
+        cursor: pointer;
+      }
+      a:hover {
+        color: var(--purple-500);
+      }
+      :focus {
+        outline: 0;
+      }
+      :focus:not([tabindex='-1']) {
+        outline: 4px solid var(--grey-700);
+        outline-offset: 2px;
+      }
+      @media (min-width: 960px) {
+        :root {
+          font-size: 150%;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="box box--large">
+        <ul>
+          <li>
+            <p class="logo" role="banner">indiepen</p>
+          </li>
+          <li>
+            <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+              >blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/yetanother-blog/indiepen/"
+              target="_blank"
+              rel="noopener"
+              >github</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="hero box box--small">
+        <h1 class="title">
+          Embed your<br />
+          <abbr title="HyperText Markup Language">HTML</abbr>,
+          <abbr title="Cascading Style Sheets">CSS</abbr> and
+          <abbr title="Javascript">JS</abbr> <br />
+          example with Indiepen
+        </h1>
+        <h2 class="subline">
+          an independent and privacy-friendly solution to present your code
+          example to the people.
+        </h2>
+      </div>
+      <iframe
+        class="indiepen box box--large"
+        src="https://indiepen.tech/?url=https%3A%2F%2Fexamples.yetanother.blog%2Fdark-mode-toggle%2F"
+        style="width: 100%; overflow: hidden; display: block"
+        title="CodePen Embed"
+        loading="lazy"
+        width="100%"
+        height="450"
+        frameborder="0"
+      >
+      </iframe>
+    </header>
+    <main class="box box--large">
+      <h3>Why Indiepen?</h3>
+      <p>
+        This project was initially developed because we wanted to show code
+        examples on
+        <a href="https://codepen.io/" target="_blank" rel="noopener"
+          >yetanother.blog</a
+        >. In the beginning, we used
+        <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+          >CodePen</a
+        >
+        and it worked like a charm. But during the usage, we discovered that
+        CodePen is using cookies for their embedded version. Since we try to
+        protect the privacy of our visitors and we were too lazy to implement
+        one of those evil cookie law banners. We decided to build Indiepen.
+      </p>
+      <p>
+        The idea of this project is to convince CodePen to not set cookies and
+        track our visitors. So we can use CodePen again and get rid of Indiepen
+        because we love CodePen and appreciate their hard work and creativity.
+      </p>
+      <h3>Get started</h3>
+      <ol>
+        <li>
+          <h4>Provide your code example</h4>
+          <p>
+            Before we start. We want to let you know that you can only create an
+            embed code example with HyperText Markup Language (<abbr
+              title="HyperText Markup Language"
+              >HTML</abbr
+            >), Cascading Style Sheets (<abbr title="Cascading Style Sheets"
+              >CSS</abbr
+            >) and Javascript. The other thing is that we follow a certain
+            naming convention to scrape the code. Therefore you have to name
+            your files like:
+          </p>
+          <pre>
+<code>
+├── index.html
+├── main.js
+└── styles.css
+</code>
+</pre>
+          <p>
+            Now it’s time to host your code example. There a plenty of options
+            out there. We decided to use GitHub Pages, because it’s the most
+            convenient way for us to create a quick example. Of course, you can
+            also use Netlify, Vercel or other services to host your example. By
+            the end of the day we only need a valid Uniform Resource Locator
+            (<abbr title="Uniform Resource Locator">URL</abbr>) that serves a
+            valid code example and by valid we mean it’s
+            <abbr title="HyperText Markup Language">HTML</abbr>,
+            <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. Your
+            URL could look something like that:
+          </p>
+          <p>
+            <a
+              href="https://examples.yetanother.blog/material-design-tab/"
+              target="_blank"
+              rel="noopener"
+              >https://examples.yetanother.blog/material-design-tab/</a
+            >
+          </p>
+          <aside class="documentation-hint" aria-labelledby="gh-pages-hint">
+            <h4 id="gh-pages-hint">Tip: Additional support for Github Pages</h4>
+            <p>
+              You can take a look at our
+              <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+                >examples repo on GitHub</a
+              >
+              and checkout the
+              <a
+                href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+                target="_blank"
+                rel="noopener"
+                >documentation of GitHub Pages</a
+              >. Happy Coding!
+            </p>
+          </aside>
+        </li>
+        <li>
+          <h4>Copy your code example URL</h4>
+          <p>
+            Guess what? Now we have to paste this URL into the input field and
+            hit the create example button. This will generate an
+            <code>iframe</code> and put the result into an
+            <code>textarea</code> field below.
+          </p>
+        </li>
+        <li>
+          <h4>Copy your generated code example</h4>
+          <p>
+            Copy your generated <code>iframe</code> into your website and be
+            happy.
+          </p>
+        </li>
+      </ol>
+      <h3>Code example generator</h3>
+      <form id="js-generator-form">
+        <div class="form__wrapper">
+          <label for="code-example-url">Your code example URL (required)</label>
+          <input
+            class="js-code-example-url"
+            id="code-example-url"
+            name="code-example-url"
+            type="url"
+            placeholder="https://your.example.com/"
+            required
+          />
+        </div>
+        <button id="js-generate-button" type="submit">Generate</button>
+
+        <div class="form__wrapper">
+          <label class="foo" for="generated-result"
+            >Generated code example</label
+          >
+          <textarea
+            aria-live="polite"
+            class="js-generated-result"
+            id="generated-result"
+            rows="10"
+            cols="33"
+            disabled
+            placeholder='<!-- your code example --><iframe class="indiepen" src="https://indiepen.tech/?url=https%3A%2F%2Fyour.example.com" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450" frameborder="0"></iframe>'
+          ></textarea>
+        </div>
+        <button id="js-copy-button" disabled aria-disabled="true" type="button">
+          Copy code
+        </button>
+        <button
+          id="js-reset-button"
+          disabled
+          aria-disabled="true"
+          type="button"
+        >
+          Reset
+        </button>
+      </form>
+      <hr />
+      <h3>About the creators</h3>
+      <p>
+        We’re Henrik Fricke and André Rusakow both Software developers from
+        Hamburg, Germany. We care about privacy and inclusive design. Check out
+        <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+          >yetanother.blog</a
+        >
+        for more information.
+      </p>
+      <div class="about-images">
+        <figure>
+          <img src="/website/assets/henrik.png" alt="Henrik Fricke" />
+          <figcaption>
+            <a
+              href="https://twitter.com/henrik_fricke/"
+              target="_blank"
+              rel="noopener"
+              >Henrik</a
+            >
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="/website/assets/andre.png" alt="André Rusakow" />
+          <figcaption>
+            <a
+              href="https://twitter.com/_andrewsecret/"
+              target="_blank"
+              rel="noopener"
+              >André</a
+            >
+          </figcaption>
+        </figure>
+      </div>
+      <p>That's it. Seeya later friend ¯\_(ツ)_/¯</p>
+    </main>
+    <footer class="box box--large">
+      <ul>
+        <li>
+          <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+            >terms</a
+          >
+        </li>
+        <li>
+          <a href="https://yetanother.blog/" target="_blank" rel="noopener"
+            >stats</a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <script async src="/website/main.js"></script>
+  </body>
+</html>

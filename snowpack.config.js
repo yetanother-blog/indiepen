@@ -12,6 +12,11 @@ module.exports = {
       static: true,
       resolve: false,
     },
+    website: {
+      url: '/website',
+      static: false,
+      resolve: true,
+    },
   },
   devOptions: {
     openUrl: '?url=http%3A%2F%2Flocalhost%3A8080%2Fexample',
