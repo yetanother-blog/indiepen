@@ -1,3 +1,6 @@
+const expectedSnippetCode =
+  '<iframe class="indiepen" src="https://indiepen.tech/?url=https%3A%2F%2Fexample.com" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450" frameborder="0"></iframe>';
+
 describe('Indiepen Startpage', () => {
   it('Opens the startpage', () => {
     cy.visit('/');
@@ -12,15 +15,14 @@ describe('Indiepen Startpage', () => {
       .click()
       .type('https://example.com');
     cy.contains('Generate').click();
+
+    cy.get('#generated-result').should('have.value', expectedSnippetCode);
+
     cy.contains('Copy code').click();
     cy.waitUntil(() =>
-      cy
-        .task('getClipboard')
-        .should(
-          'contain',
-          '<iframe class="indiepen" src="https://indiepen.tech/?url=https%3A%2F%2Fexample.com" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450" frameborder="0"></iframe>'
-        )
+      cy.task('getClipboard').then((snippet) => snippet === expectedSnippetCode)
     );
+
     cy.contains('Reset').click();
     cy.get('#generated-result').should('be.disabled', true);
     cy.contains('Reset').should('be.disabled', true);
