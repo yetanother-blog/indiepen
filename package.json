@@ -15,6 +15,7 @@
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
+    "@netlify/plugin-lighthouse": "^2.1.0",
     "@types/node": "^15.12.1",
     "cypress": "^7.4.0",
     "netlify-plugin-a11y": "^0.0.12",
