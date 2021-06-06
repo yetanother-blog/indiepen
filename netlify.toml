@@ -32,3 +32,12 @@ package = "netlify-plugin-a11y"
  
   [plugins.inputs]
   checkPaths = ['/']
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.9
