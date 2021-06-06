@@ -1,16 +1,33 @@
 @import 'prismjs/themes/prism.css';
 @import './navigation/navigation.css';
 
+html {
+  font-family: Inter, sans-serif;
+  color: var(--grey-900);
+  line-height: 1.5;
+}
+
+*,
+::after,
+::before {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .body {
   margin: 0;
   padding: 0;
   border: 4px solid #eee;
-  height: calc(100vh - 58px);
+  height: calc(100vh - 50px);
 }
 
 .container {
   display: flex;
-  height: 100%;
+  height: calc(100% - 50px);
 }
 
 .result {
