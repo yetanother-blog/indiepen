@@ -116,8 +116,13 @@
         text-align: right;
         padding: 1.75rem 0;
       }
-      nav ul {
+      nav {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav ul {
+        margin-top: 0;
       }
       footer li,
       nav li {
@@ -202,10 +207,8 @@
   <body>
     <header>
       <nav class="box box--large">
+        <p class="logo" role="banner">indiepen</p>
         <ul>
-          <li>
-            <p class="logo" role="banner">indiepen</p>
-          </li>
           <li>
             <a href="https://yetanother.blog/" target="_blank" rel="noopener"
               >blog</a

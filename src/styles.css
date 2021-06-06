@@ -71,6 +71,10 @@ ol li > aside {
   display: flex;
 }
 
+.about-images img {
+  width: 150px;
+}
+
 * + figure {
   margin-top: 0;
   margin-left: 1rem;
