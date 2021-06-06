@@ -50,6 +50,23 @@
       content="An independent and privacy-friendly solution to present your code example to the people."
     />
     <meta name="twitter:url" content="https://indiepen.tech/" />
+    <script
+      async
+      defer
+      data-domain="indiepen.tech"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+
+      if (document.location.hostname.indexOf('netlify.app') != -1) {
+        localStorage.plausible_ignore = true;
+      }
+    </script>
     <style>
       :root {
         --grey-900: rgb(38, 38, 38);
