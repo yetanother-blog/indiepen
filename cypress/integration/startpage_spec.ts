@@ -10,21 +10,15 @@ describe('Indiepen Startpage', () => {
     cy.get('h1').contains('Embed your HTML, CSS and JS example with Indiepen');
   });
 
-  it('Generates, copies and resets code snippet', () => {
+  it('Generates and resets the code snippet', () => {
     cy.contains('Your code example URL (required)')
       .click()
       .type('https://example.com');
     cy.contains('Generate').click();
-
     cy.get('#generated-result').should('have.value', expectedSnippetCode);
 
-    cy.contains('Copy code').click();
-    cy.waitUntil(() =>
-      cy.task('getClipboard').then((snippet) => snippet === expectedSnippetCode)
-    );
-
     cy.contains('Reset').click();
-    cy.get('#generated-result').should('be.disabled', true);
+    cy.get('#generated-result').not.should('have.value', expectedSnippetCode);
     cy.contains('Reset').should('be.disabled', true);
   });
 });
