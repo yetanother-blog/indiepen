@@ -1,4 +1,3 @@
-/* button */
 button {
   color: #fff;
   border: none;
@@ -44,7 +43,17 @@ textarea {
 
 input:disabled,
 textarea:disabled {
+  background-color: var(--grey-300);
   border: 4px solid var(--grey-300);
+}
+
+ol li {
+  margin-left: 1rem;
+}
+
+ol li > p,
+ol li > aside {
+  margin-left: -1rem;
 }
 
 .documentation-hint {
