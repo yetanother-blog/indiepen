@@ -18,6 +18,7 @@
     "@types/node": "^15.12.1",
     "clipboardy": "^2.3.0",
     "cypress": "^7.4.0",
+    "cypress-wait-until": "^1.7.1",
     "netlify-plugin-cypress": "^2.2.0",
     "node-fetch": "^2.6.1",
     "prettier": "2.3.0",
