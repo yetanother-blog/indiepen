@@ -12,9 +12,16 @@ module.exports = {
       static: true,
       resolve: false,
     },
-  },
-  devOptions: {
-    openUrl: '?url=http%3A%2F%2Flocalhost%3A8080%2Fexample',
+    website: {
+      url: '/website',
+      static: false,
+      resolve: true,
+    },
   },
   exclude: ['public/**/*'],
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: 'es2018',
+  },
 };

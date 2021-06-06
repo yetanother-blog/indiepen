@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indiepen Embed</title>
+    <link rel="stylesheet" href="/embed/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body class="body">
+    <nav class="navigation">
+      <strong>indiepen</strong>
+      <div class="navigation__actions">
+        <button
+          class="navigation__button js-navigation__button--html"
+          type="button"
+          aria-pressed="false"
+        >
+          HTML
+        </button>
+        <button
+          class="navigation__button js-navigation__button--css"
+          type="button"
+          aria-pressed="false"
+        >
+          CSS
+        </button>
+        <button
+          class="navigation__button js-navigation__button--js"
+          type="button"
+          aria-pressed="false"
+        >
+          JS
+        </button>
+        <button
+          class="navigation__button js-navigation__button--result active"
+          type="button"
+          aria-pressed="true"
+        >
+          Result
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <iframe class="result active"></iframe>
+      <div class="previews">
+        <pre class="preview preview-html"></pre>
+        <pre class="preview preview-css"></pre>
+        <pre class="preview preview-js"></pre>
+      </div>
+    </div>
+    <script type="module" src="/embed/main.js"></script>
+  </body>
+</html>
