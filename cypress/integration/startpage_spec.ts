@@ -18,7 +18,7 @@ describe('Indiepen Startpage', () => {
     cy.get('#generated-result').should('have.value', expectedSnippetCode);
 
     cy.contains('Reset').click();
-    cy.get('#generated-result').not.should('have.value', expectedSnippetCode);
+    cy.get('#generated-result').should('not.have.value', expectedSnippetCode);
     cy.contains('Reset').should('be.disabled', true);
   });
 });
