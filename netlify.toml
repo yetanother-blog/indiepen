@@ -15,7 +15,7 @@ CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
 TERM = "xterm"
 
 [[plugins]]
-  package = "./.netlify/slack"
+package = "./.netlify/slack"
 
 [[plugins]]
 package = "netlify-plugin-cypress"
@@ -26,3 +26,9 @@ package = "netlify-plugin-cypress"
     enable = true
     record = true
     group = "built site"
+
+[[plugins]]
+package = "netlify-plugin-a11y"
+ 
+  [plugins.inputs]
+  checkPaths = ['/']

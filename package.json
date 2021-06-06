@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^15.12.1",
     "cypress": "^7.4.0",
+    "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-cypress": "^2.2.0",
     "node-fetch": "^2.6.1",
     "prettier": "2.3.0",
