@@ -23,9 +23,19 @@
       <strong role="banner">indiepen</strong>
       <div class="navigation__actions">
         <button
-          class="navigation__button js-navigation__button--html"
+          class="
+            navigation__button navigation__button--result
+            js-navigation__button--result
+          "
           type="button"
           aria-pressed="false"
+        >
+          Result
+        </button>
+        <button
+          class="navigation__button js-navigation__button--html active"
+          type="button"
+          aria-pressed="true"
         >
           HTML
         </button>
@@ -43,22 +53,13 @@
         >
           JS
         </button>
-        <button
-          class="navigation__button js-navigation__button--result active"
-          type="button"
-          aria-pressed="true"
-        >
-          Result
-        </button>
       </div>
     </nav>
-    <div class="container">
-      <iframe class="result active"></iframe>
-      <div class="previews">
-        <pre class="preview preview-html"></pre>
-        <pre class="preview preview-css"></pre>
-        <pre class="preview preview-js"></pre>
-      </div>
+    <div class="previews">
+      <iframe class="preview result"></iframe>
+      <pre class="preview preview-html active"></pre>
+      <pre class="preview preview-css"></pre>
+      <pre class="preview preview-js"></pre>
     </div>
     <script type="module" src="/embed/main.js"></script>
   </body>

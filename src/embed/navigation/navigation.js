@@ -25,7 +25,6 @@ function toggleHtmlPreview() {
 
     if (!previewsWrapper.classList.contains('active')) {
       previewsWrapper.classList.add('active');
-      result.classList.remove('active');
     }
   });
 }
@@ -42,7 +41,6 @@ function toggleCssPreview() {
 
     if (!previewsWrapper.classList.contains('active')) {
       previewsWrapper.classList.add('active');
-      result.classList.remove('active');
     }
   });
 }
@@ -59,7 +57,6 @@ function toggleJsPreview() {
 
     if (!previewsWrapper.classList.contains('active')) {
       previewsWrapper.classList.add('active');
-      result.classList.remove('active');
     }
   });
 }
@@ -72,10 +69,10 @@ function toggleResult() {
     event.currentTarget.classList.toggle('active');
     handleAriaPressedState(resultButton);
     removeActiveClasses(RESULT_CLASS, event);
+    result.classList.toggle('active');
 
-    if (!result.classList.contains('active')) {
-      result.classList.add('active');
-      previewsWrapper.classList.remove('active');
+    if (!previewsWrapper.classList.contains('active')) {
+      previewsWrapper.classList.add('active');
     }
   });
 }
@@ -100,10 +97,6 @@ function removeActiveClasses(currentPreview, buttonEvent) {
   [...previewNodes].map((preview) => {
     if (!preview.classList.contains(currentPreview.substring(1))) {
       preview.classList.remove('active');
-    }
-
-    if (!result.classList.contains(currentPreview.substring(1))) {
-      result.classList.remove('active');
     }
   });
 
