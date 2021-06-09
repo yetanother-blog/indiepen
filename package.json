@@ -1,15 +1,24 @@
 {
-  "name": "previewer",
+  "name": "indiepen",
   "version": "1.0.0",
-  "description": "",
+  "description": "an independent and privacy-friendly solution to present your code example to the people.",
   "main": "main.js",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
     "lint": "prettier --check ."
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "sandbox",
+    "indiepen",
+    "html",
+    "css",
+    "javascript",
+    "code",
+    "example",
+    "embed"
+  ],
+  "author": "André Rusakow & Henrik Fricke",
   "license": "MIT",
   "dependencies": {
     "prismjs": "^1.23.0"
