@@ -38,6 +38,7 @@ pre[class*='language-'] {
 
 .result {
   width: 100%;
+  flex-shrink: 0;
   border: none;
   display: none;
 }
@@ -47,9 +48,11 @@ pre[class*='language-'] {
   flex-grow: 1;
   height: calc(100% - 50px);
   width: 100%;
+  overflow: hidden;
 }
 
 pre[class*='language-'] {
+  flex-shrink: 0;
   overflow: auto;
   margin: 0;
   height: 100%;
@@ -74,6 +77,62 @@ pre[class*='language-'] {
   display: block;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+a > span {
+  width: 24px;
+  height: 24px;
+}
+
+a:hover {
+  color: var(--grey-700);
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:focus:not([tabindex='-1']) {
+  outline: 4px solid var(--grey-700);
+  outline-offset: 2px;
+}
+
+.empty-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--grey-900);
+}
+
+.empty-view strong[role='banner'] {
+  display: block;
+  color: white;
+}
+
+.empty-view ul {
+  display: flex;
+  margin-top: 20px;
+}
+
+ul li + li {
+  margin-left: 20px;
+}
+
 @media (min-width: 470px) {
   .previews {
     flex-wrap: wrap;
@@ -90,5 +149,9 @@ pre[class*='language-'] {
 
   .preview.active {
     width: 50%;
+  }
+
+  .empty-view {
+    display: none;
   }
 }
