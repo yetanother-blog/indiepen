@@ -128,6 +128,9 @@
       ul {
         max-width: none;
       }
+      iframe {
+        border: none;
+      }
       footer ul,
       nav ul {
         list-style: none;
@@ -259,10 +262,9 @@
         class="indiepen box box--large"
         src="embed?url=/example"
         style="width: 100%; overflow: hidden; display: block"
-        title="CodePen Embed"
+        title="Indiepen Embed"
         loading="lazy"
         height="450"
-        frameborder="0"
       >
       </iframe>
     </header>
@@ -392,17 +394,8 @@
             placeholder="<!-- your code example --><iframe class='indiepen' src='https://indiepen.tech/?url=https%3A%2F%2Fyour.example.com' style='width: 100%; overflow: hidden; display: block' title='Indiepen Embed' loading='lazy' width='100%' height='450' frameborder='0'></iframe>"
           ></textarea>
         </div>
-        <button id="js-copy-button" disabled aria-disabled="true" type="button">
-          Copy code
-        </button>
-        <button
-          id="js-reset-button"
-          disabled
-          aria-disabled="true"
-          type="button"
-        >
-          Reset
-        </button>
+        <button id="js-copy-button" disabled type="button">Copy code</button>
+        <button id="js-reset-button" disabled type="button">Reset</button>
       </form>
       <hr />
       <h3>About the creators</h3>

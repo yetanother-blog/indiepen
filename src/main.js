@@ -21,20 +21,14 @@ generatorForm.addEventListener('submit', (event) => {
   copyButton.addEventListener('click', handleCopyButton);
 
   copyButton.disabled = false;
-  copyButton.setAttribute('aria-disabled', false);
-
   resetButton.disabled = false;
-  resetButton.setAttribute('aria-disabled', false);
 
   event.preventDefault();
 });
 
 function handleResetButton() {
   copyButton.disabled = true;
-  copyButton.setAttribute('aria-disabled', false);
-
   resetButton.disabled = true;
-  resetButton.setAttribute('aria-disabled', true);
   resetButton.blur();
 
   generatedResultTextarea.disabled = true;
