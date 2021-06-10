@@ -1,5 +1,6 @@
 @import 'prismjs/themes/prism-tomorrow.css';
 @import './navigation/navigation.css';
+@import '@fontsource/inter/900.css';
 
 :root {
   --grey-900: rgb(38, 38, 38);
