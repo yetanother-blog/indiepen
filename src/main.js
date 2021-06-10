@@ -1,4 +1,4 @@
-const INDIEPEN_URI = 'https://indiepen.tech';
+const INDIEPEN_URI = 'https://indiepen.tech/embed';
 const generatorForm = document.getElementById('js-generator-form');
 const generatedResultTextarea = document.querySelector('.js-generated-result');
 const codeExampleInput = document.querySelector('.js-code-example-url');
@@ -9,7 +9,7 @@ const resetButton = document.getElementById('js-reset-button');
 generatorForm.addEventListener('submit', (event) => {
   const codeExampleUrl = generatorForm.elements[0].value;
   const encodedURL = encodeURIComponent(codeExampleUrl);
-  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450" frameborder="0"></iframe>`;
+  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>`;
 
   generatorForm.reset();
   generatedResultTextarea.value += indiepenTemplate;
