@@ -21,7 +21,6 @@
   "author": "André Rusakow & Henrik Fricke",
   "license": "MIT",
   "dependencies": {
-    "@fontsource/inter": "^4.4.5",
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
