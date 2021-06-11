@@ -18,10 +18,5 @@ module.exports = {
       resolve: true,
     },
   },
-  optimize: {
-    bundle: true,
-    minify: true,
-    target: 'es2018',
-  },
   exclude: ['public/**/*'],
 };
