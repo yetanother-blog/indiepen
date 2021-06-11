@@ -1,6 +1,15 @@
 @import 'prismjs/themes/prism-tomorrow.css';
 @import './navigation/navigation.css';
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url(/embed/font/inter-latin-900-normal-subset.woff2) format('woff2');
+  unicode-range: U+43-45, U+48-4A, U+4C-4E, U+50, U+52-55;
+}
+
 :root {
   --grey-900: rgb(38, 38, 38);
   --grey-700: rgb(88, 88, 88);
