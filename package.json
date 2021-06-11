@@ -7,9 +7,10 @@
     "start": "snowpack dev",
     "prestart": "npm run copy-fonts",
     "build": "snowpack build",
+    "prebuild": "npm run copy-fonts",
     "lint": "prettier --check .",
-    "copy-fonts": "cpr node_modules/@fontsource public/fonts -d",
-    "copy-fonts:watch": "chokidar package-lock.json -c 'npm run copy-fonts'"
+    "copy-fonts": "npx cpr node_modules/@fontsource public/fonts -d",
+    "copy-fonts:watch": "npx chokidar package-lock.json -c 'npm run copy-fonts'"
   },
   "keywords": [
     "sandbox",
