@@ -1,7 +1,7 @@
-@import '/fonts/inter/400.css';
-@import '/fonts/inter/700.css';
-@import '/fonts/inter/900.css';
-@import '/fonts/source-code-pro/500.css';
+@import '/assets/fonts/inter/400.css';
+@import '/assets/fonts/inter/700.css';
+@import '/assets/fonts/inter/900.css';
+@import '/assets/fonts/source-code-pro/500.css';
 
 button {
   color: #fff;
