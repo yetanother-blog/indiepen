@@ -18,5 +18,5 @@ module.exports = {
       resolve: true,
     },
   },
-  exclude: ['public/**/*'],
+  exclude: ['public/**/*', '**/LICENSE'],
 };
