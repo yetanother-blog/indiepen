@@ -23,5 +23,5 @@ module.exports = {
     minify: true,
     target: 'es2018',
   },
-  exclude: ['public/**/*', '**/LICENSE'],
+  exclude: ['public/**/*'],
 };
