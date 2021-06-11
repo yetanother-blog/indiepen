@@ -1,3 +1,8 @@
+@import '/fonts/inter/400.css';
+@import '/fonts/inter/700.css';
+@import '/fonts/inter/900.css';
+@import '/fonts/source-code-pro/500.css';
+
 button {
   color: #fff;
   border: none;

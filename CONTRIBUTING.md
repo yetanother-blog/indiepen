@@ -5,9 +5,6 @@
 For the embed, we use a subset of the font Inter. Use the following commands to re-generate the font:
 
 ```sh
-# Temporarily download the font
-npm i @fontsource/inter
-
 # Install dependencies for glyphhanger
 pip install fonttools
 pip install brotli

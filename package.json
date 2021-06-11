@@ -5,8 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "snowpack dev",
+    "prestart": "npm run copy-fonts",
     "build": "snowpack build",
-    "lint": "prettier --check ."
+    "prebuild": "npm run copy-fonts",
+    "lint": "prettier --check .",
+    "copy-fonts": "npx cpr node_modules/@fontsource public/fonts -d",
+    "copy-fonts:watch": "npx chokidar package-lock.json -c 'npm run copy-fonts'"
   },
   "keywords": [
     "sandbox",
@@ -21,11 +25,16 @@
   "author": "André Rusakow & Henrik Fricke",
   "license": "MIT",
   "dependencies": {
+    "@fontsource/inter": "^4.4.5",
+    "@fontsource/source-code-pro": "^4.4.5",
     "prismjs": "^1.23.0"
   },
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^2.1.0",
+    "@snowpack/plugin-run-script": "^2.3.0",
     "@types/node": "^15.12.2",
+    "chokidar-cli": "^2.1.0",
+    "cpr": "^3.0.1",
     "cypress": "^7.5.0",
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-cypress": "^2.2.0",
