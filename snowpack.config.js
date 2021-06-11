@@ -5,15 +5,11 @@ module.exports = {
     src: '/',
     public: '/',
   },
-  exclude: ['public/**/*', '**/*/LICENSE'],
-  plugins: [
-    [
-      '@snowpack/plugin-run-script',
-      {
-        name: 'Copy fonts from node_modules/@fontsource to public/fonts',
-        cmd: 'npm run copy-fonts',
-        watch: 'npm run copy-fonts:watch',
-      },
-    ],
-  ],
+  exclude: ['**/*/LICENSE'],
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: 'es2018',
+  },
+  plugins: ['snowpack-plugin-relative-css-urls'],
 };

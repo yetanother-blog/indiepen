@@ -1,4 +1,5 @@
 build
 node_modules
-public/fonts
+public/assets/fonts
+public/assets/prismjs
 .DS_Store

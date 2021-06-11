@@ -1,4 +1,4 @@
-@import 'prismjs/themes/prism-tomorrow.css';
+@import '/assets/prismjs/prism-tomorrow.css';
 @import './navigation/navigation.css';
 
 @font-face {
