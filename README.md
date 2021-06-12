@@ -7,7 +7,7 @@
 An independent and privacy-friendly solution to present your HTML, CSS and JS code example to the people.
 
 ![Preview of Indiepen Embed](./docs/embed.png)
-👉 [Get started](https://indiepen.tech)
+👉 [Get started](https://indiepen.tech#get-started)
 
 ## Features 🤩
 
