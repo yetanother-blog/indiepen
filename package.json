@@ -9,6 +9,8 @@
     "build": "snowpack build",
     "prebuild": "npm run copy",
     "postbuild": "npx cpr public/example build/example -d",
+    "test": "cypress run",
+    "test:dev": "cypress open",
     "lint": "prettier --check .",
     "copy": "npm run copy:prismjs & npm run copy:fonts",
     "copy:prismjs": "npx cpr node_modules/prismjs/themes/ public/assets/prismjs -d",
