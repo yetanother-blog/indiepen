@@ -3,6 +3,10 @@ import {
   previewCss,
   previewJs,
   result,
+  resultButton,
+  htmlButton,
+  cssButton,
+  jsButton,
   PREVIEW_HTML_CLASS,
   PREVIEW_CSS_CLASS,
   PREVIEW_JS_CLASS,
@@ -15,12 +19,38 @@ const ACTIVE_CLASS = 'active';
 
 const previewsWrapper = document.querySelector(PREVIEWS_CLASS);
 
-function toggleHtmlPreview() {
-  const HTML_BUTTON = '.js-navigation__button--html';
-  const htmlButton = document.querySelector(HTML_BUTTON);
+function handleDefaultTab() {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const tabValue = urlSearchParams.has('tab')
+    ? urlSearchParams.get('tab')
+    : null;
 
+  const previewMapping = {
+    result: result,
+    html: previewHtml,
+    css: previewCss,
+    js: previewJs,
+  };
+
+  const navivationButtonMapping = {
+    result: resultButton,
+    html: htmlButton,
+    css: cssButton,
+    js: jsButton,
+  };
+
+  if (!tabValue) {
+    navivationButtonMapping['html'].setAttribute('aria-pressed', true);
+    previewMapping['html'].classList.add(ACTIVE_CLASS);
+    return;
+  }
+
+  navivationButtonMapping[tabValue].setAttribute('aria-pressed', true);
+  previewMapping[tabValue].classList.add(ACTIVE_CLASS);
+}
+
+function toggleHtmlPreview() {
   htmlButton.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle(ACTIVE_CLASS);
     handleAriaPressedState(htmlButton);
     removeActiveClasses(PREVIEW_HTML_CLASS, event);
     previewHtml.classList.toggle(ACTIVE_CLASS);
@@ -34,11 +64,7 @@ function toggleHtmlPreview() {
 }
 
 function toggleCssPreview() {
-  const CSS_BUTTON = '.js-navigation__button--css';
-  const cssButton = document.querySelector(CSS_BUTTON);
-
   cssButton.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle(ACTIVE_CLASS);
     handleAriaPressedState(cssButton);
     removeActiveClasses(PREVIEW_CSS_CLASS, event);
     previewCss.classList.toggle(ACTIVE_CLASS);
@@ -52,11 +78,7 @@ function toggleCssPreview() {
 }
 
 function toggleJsPreview() {
-  const JS_BUTTON = '.js-navigation__button--js';
-  const jsButton = document.querySelector(JS_BUTTON);
-
   jsButton.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle(ACTIVE_CLASS);
     handleAriaPressedState(jsButton);
     removeActiveClasses(PREVIEW_JS_CLASS, event);
     previewJs.classList.toggle(ACTIVE_CLASS);
@@ -70,11 +92,7 @@ function toggleJsPreview() {
 }
 
 function toggleResult() {
-  const RESULT_BUTTON = '.js-navigation__button--result';
-  const resultButton = document.querySelector(RESULT_BUTTON);
-
   resultButton.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle(ACTIVE_CLASS);
     handleAriaPressedState(resultButton);
     removeActiveClasses(RESULT_CLASS, event);
     result.classList.toggle(ACTIVE_CLASS);
@@ -135,6 +153,7 @@ function removeActiveClasses(currentPreview, buttonEvent) {
 }
 
 export function initNavigation() {
+  handleDefaultTab();
   toggleHtmlPreview();
   toggleCssPreview();
   toggleJsPreview();

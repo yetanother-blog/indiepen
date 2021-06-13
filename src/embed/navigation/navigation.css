@@ -51,7 +51,7 @@ strong[role='banner'] {
   text-decoration-thickness: 2px;
 }
 
-.navigation__button.active {
+.navigation__button[aria-pressed='true'] {
   background-color: var(--grey-900);
   box-shadow: inset 4px 4px 0 var(--grey-700);
   color: white;

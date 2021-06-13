@@ -38,7 +38,7 @@ pre[class*='language-'] {
   background-color: var(--grey-900);
 }
 
-.body {
+body {
   margin: 0;
   padding: 0;
   border: 4px solid var(--grey-900);
