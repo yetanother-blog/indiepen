@@ -40,7 +40,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   border: 4px solid var(--grey-900);
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -88,4 +89,12 @@ ol li > aside {
 div figure figcaption {
   margin-top: 0;
   text-align: center;
+}
+
+select {
+  background: url(/assets/arrow-down.svg) no-repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
