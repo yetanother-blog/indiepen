@@ -113,6 +113,7 @@
       nav,
       ol,
       textarea,
+      select,
       ul {
         max-width: none;
       }
@@ -365,6 +366,16 @@
             placeholder="https://your.example.com/"
             required
           />
+          <label for="preview-pre-select"
+            >Pre-select initial tab (optional):</label
+          >
+          <select name="previews" id="preview-pre-select">
+            <option value="">--Please choose an option--</option>
+            <option value="result">Result</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JS</option>
+          </select>
         </div>
         <button id="js-generate-button" type="submit">Generate</button>
 
@@ -379,7 +390,7 @@
             rows="10"
             cols="33"
             disabled
-            placeholder="<!-- your code example --><iframe class='indiepen' src='https://indiepen.tech/?url=https%3A%2F%2Fyour.example.com' style='width: 100%; overflow: hidden; display: block' title='Indiepen Embed' loading='lazy' width='100%' height='450' frameborder='0'></iframe>"
+            placeholder="<!-- your code example --><iframe class='indiepen' src='https://indiepen.tech/?url=https%3A%2F%2Fyour.example.com' style='width: 100%; overflow: hidden; display: block' title='Indiepen Embed' loading='lazy' width='100%' height='450'></iframe>"
           ></textarea>
         </div>
         <button id="js-copy-button" disabled type="button">Copy code</button>

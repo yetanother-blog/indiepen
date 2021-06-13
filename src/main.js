@@ -9,7 +9,11 @@ const resetButton = document.getElementById('js-reset-button');
 generatorForm.addEventListener('submit', (event) => {
   const codeExampleUrl = generatorForm.elements[0].value;
   const encodedURL = encodeURIComponent(codeExampleUrl);
-  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>`;
+
+  const preSelectedTab = generatorForm.elements[1].value;
+  const tabQueryParameter = preSelectedTab && `&tab=${preSelectedTab}`;
+
+  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}${tabQueryParameter}" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>`;
 
   generatorForm.reset();
   generatedResultTextarea.value += indiepenTemplate;
