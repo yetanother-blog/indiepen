@@ -7,7 +7,7 @@
     <title>Indiepen</title>
     <meta
       name="description"
-      content="An independent and privacy-friendly solution to present your code example to the people."
+      content="An independent and privacy-friendly solution to embed HTML, CSS and JS code examples"
     />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,19 +24,22 @@
 
     <link rel="canonical" href="https://indiepen.tech/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta property="og:site_name" content="Indiepen" />
+    <meta
+      property="og:site_name"
+      content="Indiepen - An independent and privacy-friendly solution to embed HTML, CSS and JS code examples"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Indiepen" />
     <meta
       property="og:description"
-      content="An independent and privacy-friendly solution to present your code example to the people."
+      content="An independent and privacy-friendly solution to embed HTML, CSS and JS code examples"
     />
     <meta property="og:url" content="https://indiepen.tech/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Indiepen" />
     <meta
       name="twitter:description"
-      content="An independent and privacy-friendly solution to present your code example to the people."
+      content="An independent and privacy-friendly solution to embed HTML, CSS and JS code examples "
     />
     <meta name="twitter:url" content="https://indiepen.tech/" />
     <script
@@ -243,8 +246,8 @@
           example with Indiepen
         </h1>
         <h2 class="subline">
-          an independent and privacy-friendly solution to present your code
-          example to the people.
+          An independent and privacy-friendly solution to present your code
+          examples to the people.
         </h2>
       </div>
       <iframe
@@ -262,99 +265,65 @@
       <p>
         This project was initially developed because we wanted to show code
         examples on
-        <a href="https://codepen.io/" target="_blank" rel="noopener"
-          >yetanother.blog</a
-        >. In the beginning, we used
         <a href="https://yetanother.blog/" target="_blank" rel="noopener"
-          >CodePen</a
-        >
-        and it worked like a charm. But during the usage, we discovered that
-        CodePen is using cookies for their embedded version. Since we try to
-        protect the privacy of our visitors and we were too lazy to implement
-        one of those evil cookie law banners. We decided to build Indiepen.
+          >yetanother.blog</a
+        >. We use platforms to share code examples every day and we love them,
+        but they didn’t fit our requirements. We care about a modern, fast and
+        fair web. That means, we cannot integrate code snippets, that set
+        cookies, include unnecessary tracking tools, come with bad performance
+        or with a set of overloaded features.
       </p>
+
       <p>
-        The idea of this project is to convince CodePen to not set cookies and
-        track our visitors. So we can use CodePen again and get rid of Indiepen
-        because we love CodePen and appreciate their hard work and creativity.
+        Indiepen is a lightweight solution to embed HTML, CSS and JS code
+        examples. We ship less than 20 KB, we don’t set any cookies or tracking,
+        and, most importantly, we develop inclusive features for everyone.
       </p>
       <h3 id="get-started">Get started</h3>
-      <ol>
-        <li>
-          <h4>Provide your code example</h4>
-          <p>
-            Before we start. We want to let you know that you can only create an
-            embed code example with HyperText Markup Language (<abbr
-              title="HyperText Markup Language"
-              >HTML</abbr
-            >), Cascading Style Sheets (<abbr title="Cascading Style Sheets"
-              >CSS</abbr
-            >) and Javascript. The other thing is that we follow a certain
-            naming convention to scrape the code. Therefore you have to name
-            your files like:
-          </p>
-          <pre>
+      <p>
+        Create your code examples with HTML, CSS and JavaScript and host the
+        examples somewhere on the internet. Indiepen takes the Uniform Resource
+        Locator (<abbr title="Uniform Resource Locator">URL</abbr>) of your code
+        examples, scrapes the files and provides a preview together with the
+        ability to discover the code.
+      </p>
+      <p>
+        That said, your code examples need to follow a naming convention for the
+        files:
+      </p>
+      <pre>
 <code>
 ├── index.html
 ├── main.js
 └── styles.css
 </code>
 </pre>
-          <p>
-            Now it’s time to host your code example. There a plenty of options
-            out there. We decided to use GitHub Pages, because it’s the most
-            convenient way for us to create a quick example. Of course, you can
-            also use Netlify, Vercel or other services to host your example. By
-            the end of the day we only need a valid Uniform Resource Locator
-            (<abbr title="Uniform Resource Locator">URL</abbr>) that serves a
-            valid code example and by valid we mean it’s
-            <abbr title="HyperText Markup Language">HTML</abbr>,
-            <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. Your
-            URL could look something like that:
-          </p>
-          <p>
-            <a
-              href="https://examples.yetanother.blog/material-design-tab/"
-              target="_blank"
-              rel="noopener"
-              >https://examples.yetanother.blog/material-design-tab/</a
-            >
-          </p>
-          <aside class="documentation-hint" aria-labelledby="gh-pages-hint">
-            <h4 id="gh-pages-hint">Tip: Additional support for Github Pages</h4>
-            <p>
-              You can take a look at our
-              <a href="https://yetanother.blog/" target="_blank" rel="noopener"
-                >examples repo on GitHub</a
-              >
-              and checkout the
-              <a
-                href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
-                target="_blank"
-                rel="noopener"
-                >documentation of GitHub Pages</a
-              >. Happy Coding!
-            </p>
-          </aside>
-        </li>
-        <li>
-          <h4>Copy your code example URL</h4>
-          <p>
-            Guess what? Now we have to paste this URL into the input field and
-            hit the create example button. This will generate an
-            <code>iframe</code> and put the result into an
-            <code>textarea</code> field below.
-          </p>
-        </li>
-        <li>
-          <h4>Copy your generated code example</h4>
-          <p>
-            Copy your generated <code>iframe</code> into your website and be
-            happy.
-          </p>
-        </li>
-      </ol>
-      <h3>Code example generator</h3>
+      <aside class="documentation-hint" aria-labelledby="gh-pages-hint">
+        <h4 id="gh-pages-hint">Tip: GitHub Pages</h4>
+        <p>
+          For our own code examples, we simply created a new
+          <a
+            href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+            target="_blank"
+            rel="noopener"
+            >GitHub repository</a
+          >
+          and enabled GitHub Pages.
+          <a
+            href="https://github.com/yetanother-blog/examples"
+            target="_blank"
+            rel="noopener"
+            >Check out our repository</a
+          >
+          to get an idea of how we use Indiepen. Happy Coding!
+        </p>
+      </aside>
+      <p>
+        Use the code snippet generator below to generate the snippet. After
+        that, simply paste the code snippet on your website and that’s it!
+      </p>
+
+      <h3>Code snippet generator</h3>
       <form id="js-generator-form">
         <div class="form__wrapper">
           <label for="code-example-url">Your code example URL (required)</label>
@@ -399,12 +368,12 @@
       <hr />
       <h3>About the creators</h3>
       <p>
-        We’re Henrik Fricke and André Rusakow both Software developers from
-        Hamburg, Germany. We care about privacy and inclusive design. Check out
+        We are Henrik and André, both software developers based in Hamburg.
+        Indiepen is our first open source project and we are super excited to
+        share our ideas for a modern web with you. Learn more on our tech blog
         <a href="https://yetanother.blog/" target="_blank" rel="noopener"
           >yetanother.blog</a
-        >
-        for more information.
+        >.
       </p>
       <div class="about-images">
         <figure>
