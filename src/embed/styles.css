@@ -91,14 +91,9 @@ ul {
 }
 
 a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  color: var(--grey-900);
   text-decoration: none;
   cursor: pointer;
-  width: 48px;
-  height: 48px;
 }
 
 a > span {
@@ -136,6 +131,15 @@ a:focus:not([tabindex='-1']) {
 .empty-view ul {
   display: flex;
   margin-top: 20px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: white;
 }
 
 ul li + li {
