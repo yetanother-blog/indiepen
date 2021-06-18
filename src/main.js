@@ -13,7 +13,7 @@ generatorForm.addEventListener('submit', (event) => {
   const preSelectedTab = generatorForm.elements[1].value;
   const tabQueryParameter = preSelectedTab && `&tab=${preSelectedTab}`;
 
-  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}${tabQueryParameter}" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>`;
+  const indiepenTemplate = `<iframe class="indiepen" src="${INDIEPEN_URI}/?url=${encodedURL}${tabQueryParameter}" style="width: 100%; overflow: hidden; display: block; border: 0;" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>`;
 
   generatorForm.reset();
   generatedResultTextarea.value += indiepenTemplate;

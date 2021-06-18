@@ -1,5 +1,5 @@
 const expectedSnippetCode =
-  '<iframe class="indiepen" src="https://indiepen.tech/embed/?url=https%3A%2F%2Fexample.com" style="width: 100%; overflow: hidden; display: block" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>';
+  '<iframe class="indiepen" src="https://indiepen.tech/embed/?url=https%3A%2F%2Fexample.com" style="width: 100%; overflow: hidden; display: block; border: 0;" title="Indiepen Embed" loading="lazy" width="100%" height="450"></iframe>';
 
 describe('Indiepen Startpage', () => {
   it('Opens the startpage', () => {
