@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-lighthouse": "^2.1.2",
-    "@types/node": "^15.12.2",
+    "@types/node": "^15.12.4",
     "cpr": "^3.0.1",
     "cypress": "^7.5.0",
     "netlify-plugin-a11y": "^0.0.12",
