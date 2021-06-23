@@ -52,7 +52,7 @@ function handleDefaultTab() {
 function toggleHtmlPreview() {
   htmlButton.addEventListener('click', (event) => {
     handleAriaPressedState(htmlButton);
-    removeActiveClasses(PREVIEW_HTML_CLASS, event);
+    removeActiveClasses(PREVIEW_HTML_CLASS);
     previewHtml.classList.toggle(ACTIVE_CLASS);
 
     if (!previewsWrapper.classList.contains(ACTIVE_CLASS)) {
@@ -66,7 +66,7 @@ function toggleHtmlPreview() {
 function toggleCssPreview() {
   cssButton.addEventListener('click', (event) => {
     handleAriaPressedState(cssButton);
-    removeActiveClasses(PREVIEW_CSS_CLASS, event);
+    removeActiveClasses(PREVIEW_CSS_CLASS);
     previewCss.classList.toggle(ACTIVE_CLASS);
 
     if (!previewsWrapper.classList.contains(ACTIVE_CLASS)) {
@@ -80,7 +80,7 @@ function toggleCssPreview() {
 function toggleJsPreview() {
   jsButton.addEventListener('click', (event) => {
     handleAriaPressedState(jsButton);
-    removeActiveClasses(PREVIEW_JS_CLASS, event);
+    removeActiveClasses(PREVIEW_JS_CLASS);
     previewJs.classList.toggle(ACTIVE_CLASS);
 
     if (!previewsWrapper.classList.contains(ACTIVE_CLASS)) {
@@ -94,7 +94,7 @@ function toggleJsPreview() {
 function toggleResult() {
   resultButton.addEventListener('click', (event) => {
     handleAriaPressedState(resultButton);
-    removeActiveClasses(RESULT_CLASS, event);
+    removeActiveClasses(RESULT_CLASS);
     result.classList.toggle(ACTIVE_CLASS);
 
     if (!previewsWrapper.classList.contains(ACTIVE_CLASS)) {
@@ -136,18 +136,11 @@ function handleEmptyState() {
   }
 }
 
-function removeActiveClasses(currentPreview, buttonEvent) {
+function removeActiveClasses(currentPreview) {
   const previewNodes = document.querySelectorAll(PREVIEW_CLASS);
-  const buttonNodes = document.querySelectorAll('.navigation__button');
   [...previewNodes].map((preview) => {
     if (!preview.classList.contains(currentPreview.substring(1))) {
       preview.classList.remove(ACTIVE_CLASS);
-    }
-  });
-
-  [...buttonNodes].map((button) => {
-    if (buttonEvent.currentTarget !== button) {
-      button.classList.remove(ACTIVE_CLASS);
     }
   });
 }
