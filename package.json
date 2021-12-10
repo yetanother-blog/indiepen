@@ -44,6 +44,6 @@
     "prettier": "2.3.0",
     "snowpack": "^3.8.8",
     "snowpack-plugin-relative-css-urls": "^1.2.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.3"
   }
 }
