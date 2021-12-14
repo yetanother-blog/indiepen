@@ -41,7 +41,7 @@ export async function initSandbox() {
 
   Prism.highlightAll();
 
-  result.src = url;
+  result.contentWindow.location.replace(url);
 }
 
 initNavigation();
