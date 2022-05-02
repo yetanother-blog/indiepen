@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@fontsource/inter": "^4.5.10",
-    "@fontsource/source-code-pro": "^4.5.6",
+    "@fontsource/source-code-pro": "^4.5.9",
     "prismjs": "^1.28.0"
   },
   "devDependencies": {
