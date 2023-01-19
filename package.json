@@ -29,7 +29,7 @@
   "author": "André Rusakow & Henrik Fricke",
   "license": "MIT",
   "dependencies": {
-    "@fontsource/inter": "^4.5.14",
+    "@fontsource/inter": "^4.5.15",
     "@fontsource/source-code-pro": "^4.5.12",
     "prismjs": "^1.29.0"
   },
